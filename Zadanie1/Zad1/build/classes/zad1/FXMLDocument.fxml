@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zad1.FXMLDocumentController">
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Input" />
+            <TextField fx:id="in" onKeyPressed="#wpisz" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Output" />
+            <TextField fx:id="out" editable="false" style="-fx-background-color: #C6CECE;" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Input Scale" />
+            <RadioButton fx:id="c1" mnemonicParsing="false" selected="true" text="Celcius">
+               <toggleGroup>
+                  <ToggleGroup fx:id="in1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="f1" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$in1" />
+            <RadioButton fx:id="k1" mnemonicParsing="false" text="Kelvin" toggleGroup="$in1" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Output Scale" />
+            <RadioButton fx:id="c2" mnemonicParsing="false" selected="true" text="Celcius">
+               <toggleGroup>
+                  <ToggleGroup fx:id="out1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="f2" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$out1" />
+            <RadioButton fx:id="k2" mnemonicParsing="false" text="Kelvin" toggleGroup="$out1" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
